@@ -4,6 +4,7 @@ import pyodbc
 import sys
 import os
 from models.user import User
+import models
 
 driver = os.environ.get('CONTACT_SQL_DRIVER')
 server = os.environ.get('CONTACT_SQL_SERVER')
@@ -34,6 +35,10 @@ cnxn = pyodbc.connect(conn_str)
 cursor = cnxn.cursor()
 cursor.execute(statement)
 row = cursor.fetchall()
+print('got rows')
 for r in row:
-    u = User(r[1], r[2], r[3], r[4])
+    u = User(first_name=r[1], last_name=r[2], email=r[3], phone=r[4])
+    u.save()
     print(u)
+
+models.storage.save()

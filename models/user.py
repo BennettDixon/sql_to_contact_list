@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """user class"""
+from models.base_model import BaseModel
 
-class User():
+class User(BaseModel):
     """user class"""
-    def __init__(self, first, last, email, phone):
-        self.first_name = first
-        self.last_name = last
-        self.email = email
-        self.phone = phone
+    first_name = ""
+    last_name = ""
+    email = ""
+    phone = ""
 
     def __str__(self):
         return "Name: {} {}\nEmail: {}\nPhone: {}\n".format(
