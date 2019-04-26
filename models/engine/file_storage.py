@@ -31,14 +31,12 @@ class FileStorage():
         """sets in __objects the obj with key <obj class name>.id
         """
         # TODO not sure if this check is needed for holberton checker
-        print('adding new obj')
         try:
             obj_d = obj.to_dict()
         except:
             raise TypeError('object passed to filestorage has no to_dict()')
         key = obj_d['__class__'] + '.' + str(obj_d['id'])
         self.__objects[key] = obj
-        print('set obj in objs {}'.format(self.__objects[key]))
 
     def delete(self, obj):
         """deletes obj from __objects

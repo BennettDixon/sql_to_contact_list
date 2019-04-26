@@ -17,11 +17,9 @@ class BaseModel():
         """init method for base class used in instantiation
         """
         if len(kwargs) >= 1:
-            print("setting from dict")
             self.set_from_dict(**kwargs)
         self.id = str(uuid.uuid4())
         models.storage.new(self)
-        print('created base_model inherited inst')
 
     def __str__(self):
         """custom str method for str and print
