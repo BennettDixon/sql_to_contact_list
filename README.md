@@ -37,7 +37,6 @@ $ brew install unixodbc
 
 ## :blue_book: Authors
 * **Bennett Dixon** - [@BennettDixon](https://github.com/BennettDixon)
-* **Wendy Leung** - [@wendyiscoding](https://github.com/wendyiscoding)
 
 ## :mag: License
 
